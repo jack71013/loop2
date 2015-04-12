@@ -1,1 +1,68 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_repeat" id="40" inline="true" x="255" y="137">
+    <value name="TIMES">
+      <block type="math_number" id="91">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="led_select" id="59" inline="true">
+        <field name="ACTION">FLASH</field>
+        <value name="LED">
+          <block type="math_number" id="98">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="led_select" id="78" inline="true">
+            <field name="ACTION">FLASH</field>
+            <value name="LED">
+              <block type="math_number" id="113">
+                <field name="NUM">5</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_forward" id="123">
+                <next>
+                  <block type="robot_delay" id="126" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="140">
+                        <field name="NUM">4000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="led_select" id="149" inline="true">
+                        <field name="ACTION">FLASH</field>
+                        <value name="LED">
+                          <block type="math_number" id="156">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_right" id="166">
+                            <next>
+                              <block type="robot_delay" id="168" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="181">
+                                    <field name="NUM">1300</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="50"></block>
+    </next>
+  </block>
+</xml>
